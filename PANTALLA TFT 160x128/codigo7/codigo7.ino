@@ -104,7 +104,7 @@ void setup() {
   for(int i=0; i<=steps; i++){
     float progress = (float)i/steps;
     drawProgressBarHorizontal(barX, barY, barW, barH, progress);
-    delay(50); // Total ~2.5s
+    delay(70); // Total ~2.5s
   }
 
   // 3️⃣ Limpiar pantalla
