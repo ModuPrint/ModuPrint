@@ -65,7 +65,7 @@ void drawProgressBarHorizontal(int x, int y, int w, int h, float progress) {
   tft.startWrite();
   // Parte llena (Verde)
   if (barFillWidth > 0) {
-    tft.fillRect(x, y, barFillWidth, h, TFT_GREEN);
+    tft.fillRect(x, y, barFillWidth, h, TFT_RED);
   }
   // Parte vacía (Gris Oscuro)
   if (barFillWidth < w) {
@@ -111,18 +111,25 @@ void setup() {
   tft.fillScreen(TFT_BLACK);
 
   // 4️⃣ Mostrar menú
-  tft.setTextColor(TFT_WHITE);
-  tft.setTextSize(2);
-  tft.setCursor(20, 20);
-  tft.println("BIENVENIDO!");
+  
+  tft.setTextColor(TFT_PURPLE);
+  tft.setTextSize(3);
+  tft.setCursor(0, 3);
+  tft.println("MiTul");
 
+tft.setTextColor(TFT_WHITE);
+  tft.setTextSize(2);
+  tft.setCursor(5, 50);
+  tft.println("1->WiFI");
+  tft.setCursor(5, 68);
+  tft.println("2->BT");
+  tft.setCursor(5, 86);
+  tft.println("3->Ajustes");
+
+tft.setTextColor(TFT_RED);
   tft.setTextSize(1);
-  tft.setCursor(20, 50);
-  tft.println("1. Opcion A");
-  tft.setCursor(20, 65);
-  tft.println("2. Opcion B");
-  tft.setCursor(20, 80);
-  tft.println("3. Opcion C");
+  tft.setCursor(47, 150);
+  tft.println("MiTul_OS v1.0");
 }
 
 void loop() {
